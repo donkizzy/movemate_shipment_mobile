@@ -1,12 +1,11 @@
 
 
 import 'package:flutter/material.dart';
+import 'package:movemate_shipment/core/app_colors.dart';
 
 class LineIndicatorBottomNavbarItems extends StatelessWidget {
   final IconData? icon;
   final String? label;
-  final Color? selectedColor;
-  final Color? unSelectedColor;
   final double unSelectedFontSize;
   final double selectedIconSize;
   final double unselectedIconSize;
@@ -23,8 +22,6 @@ class LineIndicatorBottomNavbarItems extends StatelessWidget {
   const LineIndicatorBottomNavbarItems({super.key,
     this.icon,
     this.label,
-    this.selectedColor,
-    this.unSelectedColor,
     this.unSelectedFontSize = 11,
     this.selectedFontSize = 12,
     this.selectedIconSize = 20,
@@ -39,9 +36,7 @@ class LineIndicatorBottomNavbarItems extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final BottomNavigationBarThemeData bottomTheme =
-    BottomNavigationBarTheme.of(context);
-
+    var isSelected = currentIndex == index;
     return SafeArea(
       child: Padding(
         padding: const EdgeInsets.only(right: 7),
@@ -57,9 +52,8 @@ class LineIndicatorBottomNavbarItems extends StatelessWidget {
                 border: enableLineIndicator
                     ? Border(
                   top:  BorderSide(
-                    color: currentIndex == index
-                        ? selectedColor ??
-                        bottomTheme.selectedItemColor!
+                    color: isSelected
+                        ? gigasPurple
                         : Colors.transparent,
                     width: lineIndicatorWidth,
                   )
@@ -74,12 +68,12 @@ class LineIndicatorBottomNavbarItems extends StatelessWidget {
                 children: [
                   Icon(
                     icon,
-                    size: currentIndex == index
+                    size: isSelected
                         ? selectedIconSize
                         : unselectedIconSize,
-                    color: currentIndex == index
-                        ? selectedColor ?? bottomTheme.unselectedItemColor
-                        : unSelectedColor,
+                    color: isSelected
+                        ? gigasPurple
+                        : bombayGrey,
                   ),
                   const SizedBox(
                     height: 5.0,
@@ -89,12 +83,13 @@ class LineIndicatorBottomNavbarItems extends StatelessWidget {
                     textAlign: TextAlign.center,
                     overflow: TextOverflow.ellipsis,
                     style: TextStyle(
-                      fontSize: currentIndex == index
+                      fontWeight: isSelected ? FontWeight.w500 : FontWeight.w400,
+                      fontSize: isSelected
                           ? selectedFontSize
                           : unSelectedFontSize,
-                      color: currentIndex == index
-                          ? selectedColor ?? bottomTheme.unselectedItemColor
-                          : unSelectedColor,
+                      color: isSelected
+                          ? gigasPurple
+                          : bombayGrey,
                     ),
                   ),
                 ],

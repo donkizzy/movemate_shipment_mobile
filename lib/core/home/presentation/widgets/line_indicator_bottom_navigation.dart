@@ -1,15 +1,11 @@
-library custom_line_indicator_bottom_navbar;
-
 import 'package:flutter/material.dart';
+import 'package:movemate_shipment/core/app_colors.dart';
 import 'package:movemate_shipment/core/home/presentation/widgets/line_indicator_bottom_item.dart';
 import 'package:movemate_shipment/core/home/presentation/widgets/line_indicator_bottom_items.dart';
 
 
 class LineIndicatorBottomNavbar extends StatelessWidget {
-  final Color? backgroundColor;
   final List<LineIndicatorBottomBarItems> customBottomBarItems;
-  final Color? selectedColor;
-  final Color? unSelectedColor;
   final double unselectedFontSize;
   final Color? splashColor;
   final int currentIndex;
@@ -22,10 +18,7 @@ class LineIndicatorBottomNavbar extends StatelessWidget {
   final LinearGradient? gradient;
 
   const LineIndicatorBottomNavbar({super.key,
-    this.backgroundColor,
-    this.selectedColor,
     required this.customBottomBarItems,
-    this.unSelectedColor,
     this.unselectedFontSize = 11,
     this.selectedFontSize = 12,
     this.selectedIconSize = 20,
@@ -39,12 +32,10 @@ class LineIndicatorBottomNavbar extends StatelessWidget {
   });
   @override
   Widget build(BuildContext context) {
-    final BottomNavigationBarThemeData bottomTheme =
-    BottomNavigationBarTheme.of(context);
     return Container(
       width: double.infinity,
       decoration: BoxDecoration(
-        color: backgroundColor ?? bottomTheme.backgroundColor,
+        color: hintGrey,
         gradient: gradient,
       ),
       child: SingleChildScrollView(
@@ -54,8 +45,6 @@ class LineIndicatorBottomNavbar extends StatelessWidget {
             for (int i = 0; i < customBottomBarItems.length; i++) ...[
               Expanded(
                 child: LineIndicatorBottomNavbarItems(
-                  selectedColor: selectedColor,
-                  unSelectedColor: unSelectedColor,
                   icon: customBottomBarItems[i].icon,
                   label: customBottomBarItems[i].label,
                   unSelectedFontSize: unselectedFontSize,
