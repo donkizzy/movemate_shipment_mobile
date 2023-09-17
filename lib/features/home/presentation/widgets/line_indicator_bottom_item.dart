@@ -1,7 +1,5 @@
-import 'package:flutter/material.dart';
-
 class LineIndicatorBottomBarItems {
-  final IconData icon;
+  final String icon;
   final String label;
 
   LineIndicatorBottomBarItems({

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:movemate_shipment/core/app_colors.dart';
+import 'package:movemate_shipment/features/app_colors.dart';
 
 class VehicleListWidget extends StatelessWidget {
   const VehicleListWidget({super.key});
@@ -11,7 +11,7 @@ class VehicleListWidget extends StatelessWidget {
       child: ListView(
         scrollDirection: Axis.horizontal,
         shrinkWrap: true,
-        children: [
+        children: const [
            VehicleItem(
              title: 'Ocean Freight',
              subTitle: 'International',
@@ -60,7 +60,7 @@ class VehicleItem extends StatelessWidget {
             Text(
               subTitle,
               style: const TextStyle(
-                  fontWeight: FontWeight.w400, fontSize: 13, color: bombayGrey),
+                  fontWeight: FontWeight.w400, fontSize: 13, color: manateeGrey),
             ),
           ],
         ),

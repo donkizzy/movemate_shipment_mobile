@@ -1,10 +1,9 @@
-
-
 import 'package:flutter/material.dart';
-import 'package:movemate_shipment/core/app_colors.dart';
+import 'package:flutter_svg/flutter_svg.dart';
+import 'package:movemate_shipment/features/app_colors.dart';
 
 class LineIndicatorBottomNavbarItems extends StatelessWidget {
-  final IconData? icon;
+  final String icon;
   final String? label;
   final double unSelectedFontSize;
   final double selectedIconSize;
@@ -18,9 +17,9 @@ class LineIndicatorBottomNavbarItems extends StatelessWidget {
   final bool enableLineIndicator;
   final double lineIndicatorWidth;
 
-
-  const LineIndicatorBottomNavbarItems({super.key,
-    this.icon,
+  const LineIndicatorBottomNavbarItems({
+    super.key,
+    required this.icon,
     this.label,
     this.unSelectedFontSize = 11,
     this.selectedFontSize = 12,
@@ -51,14 +50,10 @@ class LineIndicatorBottomNavbarItems extends StatelessWidget {
               decoration: BoxDecoration(
                 border: enableLineIndicator
                     ? Border(
-                  top:  BorderSide(
-                    color: isSelected
-                        ? gigasPurple
-                        : Colors.transparent,
-                    width: lineIndicatorWidth,
-                  )
-
-                )
+                        top: BorderSide(
+                        color: isSelected ? gigasPurple : Colors.transparent,
+                        width: lineIndicatorWidth,
+                      ))
                     : null,
               ),
               padding: const EdgeInsets.symmetric(vertical: 7.0),
@@ -66,15 +61,25 @@ class LineIndicatorBottomNavbarItems extends StatelessWidget {
               // height: 60,
               child: Column(
                 children: [
-                  Icon(
+                  SvgPicture.asset(
                     icon,
-                    size: isSelected
-                        ? selectedIconSize
-                        : unselectedIconSize,
-                    color: isSelected
-                        ? gigasPurple
-                        : bombayGrey,
+                    height: isSelected ? selectedIconSize : unselectedIconSize,
+                    width: isSelected ? selectedIconSize : unselectedIconSize,
+                    fit: BoxFit.fill,
+                    colorFilter: ColorFilter.mode(
+                      isSelected ? gigasPurple : bombayGrey,
+                      BlendMode.srcIn,
+                    ),
                   ),
+                  // Icon(
+                  //   icon,
+                  //   size: isSelected
+                  //       ? selectedIconSize
+                  //       : unselectedIconSize,
+                  //   color: isSelected
+                  //       ? gigasPurple
+                  //       : bombayGrey,
+                  // ),
                   const SizedBox(
                     height: 5.0,
                   ),
@@ -83,13 +88,11 @@ class LineIndicatorBottomNavbarItems extends StatelessWidget {
                     textAlign: TextAlign.center,
                     overflow: TextOverflow.ellipsis,
                     style: TextStyle(
-                      fontWeight: isSelected ? FontWeight.w500 : FontWeight.w400,
-                      fontSize: isSelected
-                          ? selectedFontSize
-                          : unSelectedFontSize,
-                      color: isSelected
-                          ? gigasPurple
-                          : bombayGrey,
+                      fontWeight:
+                          isSelected ? FontWeight.w500 : FontWeight.w400,
+                      fontSize:
+                          isSelected ? selectedFontSize : unSelectedFontSize,
+                      color: isSelected ? gigasPurple : bombayGrey,
                     ),
                   ),
                 ],

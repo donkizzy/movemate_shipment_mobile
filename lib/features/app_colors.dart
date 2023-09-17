@@ -10,3 +10,7 @@ const hintGrey = Color(0xFFfbfafb);
 const shipGrey = Color(0xFF3B383C);
 const bombayGrey = Color(0xFFADADAE);
 const appleGreen = Color(0xFF4CC734);
+const alabasterGrey = Color(0xFFF8F8F8);
+const jumboGrey = Color(0xFF89888B);
+const manateeGrey = Color(0xFF8F8F91);
+const downeyGreen = Color(0xFF5CC699);

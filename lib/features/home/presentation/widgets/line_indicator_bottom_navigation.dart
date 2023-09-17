@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:movemate_shipment/core/app_colors.dart';
-import 'package:movemate_shipment/core/home/presentation/widgets/line_indicator_bottom_item.dart';
-import 'package:movemate_shipment/core/home/presentation/widgets/line_indicator_bottom_items.dart';
+import 'package:movemate_shipment/features/app_colors.dart';
+import 'package:movemate_shipment/features/home/presentation/widgets/line_indicator_bottom_item.dart';
+import 'package:movemate_shipment/features/home/presentation/widgets/line_indicator_bottom_items.dart';
 
 
 class LineIndicatorBottomNavbar extends StatelessWidget {
