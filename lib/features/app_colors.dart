@@ -14,3 +14,4 @@ const alabasterGrey = Color(0xFFF8F8F8);
 const jumboGrey = Color(0xFF89888B);
 const manateeGrey = Color(0xFF8F8F91);
 const downeyGreen = Color(0xFF5CC699);
+const delugePurple = Color(0xFF7360AB);

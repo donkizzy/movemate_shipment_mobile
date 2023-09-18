@@ -3,6 +3,7 @@ import 'package:flutter_staggered_animations/flutter_staggered_animations.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:movemate_shipment/features/app_colors.dart';
 import 'package:movemate_shipment/features/home/presentation/widgets/vehicles_list_widget.dart';
+import 'package:movemate_shipment/features/search/presentation/pages/search_page.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -38,8 +39,12 @@ class _HomePageState extends State<HomePage> {
               Row(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  SvgPicture.asset('assets/send.svg',
-                      height: 14, colorFilter: const ColorFilter.mode(Colors.white, BlendMode.srcIn),),
+                  SvgPicture.asset(
+                    'assets/send.svg',
+                    height: 14,
+                    colorFilter:
+                        const ColorFilter.mode(Colors.white, BlendMode.srcIn),
+                  ),
                   const SizedBox(
                     width: 5.0,
                   ),
@@ -79,38 +84,59 @@ class _HomePageState extends State<HomePage> {
           ],
           bottom: PreferredSize(
             preferredSize: const Size(double.infinity, 40),
-            child: Container(
-              margin: const EdgeInsets.only(bottom: 20, left: 15, right: 15),
-              padding:
-                  const EdgeInsets.only(left: 10, top: 5, bottom: 5, right: 7),
-              decoration: BoxDecoration(
-                color: hintGrey,
-                borderRadius: BorderRadius.circular(30.0),
-              ),
-              child: Row(
-                children: [
-                  const Icon(Icons.search, color: gigasPurple),
-                  const SizedBox(
-                    width: 5,
+            child: GestureDetector(
+              onTap: () {
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => const SearchPage()));
+              },
+              child: Hero(
+                tag: 'search',
+                child: Container(
+                  margin:
+                      const EdgeInsets.only(bottom: 20, left: 15, right: 15),
+                  padding: const EdgeInsets.only(
+                      left: 10, top: 5, bottom: 5, right: 7),
+                  decoration: BoxDecoration(
+                    color: hintGrey,
+                    borderRadius: BorderRadius.circular(30.0),
                   ),
-                  const Text(
-                    'Enter the receipt number...',
-                    style: TextStyle(color: manateeGrey),
+                  child: Row(
+                    children: [
+                      const Icon(Icons.search, color: gigasPurple),
+                      const SizedBox(
+                        width: 5,
+                      ),
+                      Expanded(
+                        child: Material(
+                          child: TextFormField(
+                            enabled: false,
+                            style: const TextStyle(
+                                fontWeight: FontWeight.w500),
+                            decoration: const InputDecoration.collapsed(
+                                hintText: '#NEJ200899',
+                                hintStyle: TextStyle(
+                                    fontWeight: FontWeight.w500,
+                                    color: manateeGrey)),
+                          ),
+                        ),
+                      ),
+                      Container(
+                        padding: const EdgeInsets.all(8),
+                        decoration: const BoxDecoration(
+                          color: jaffaOrange,
+                          shape: BoxShape.circle,
+                        ),
+                        child: SvgPicture.asset(
+                          'assets/scan.svg',
+                          colorFilter:
+                              const ColorFilter.mode(hintGrey, BlendMode.srcIn),
+                        ),
+                      )
+                    ],
                   ),
-                  const Spacer(),
-                  Container(
-                    padding: const EdgeInsets.all(8),
-                    decoration: const BoxDecoration(
-                      color: jaffaOrange,
-                      shape: BoxShape.circle,
-                    ),
-                    child: SvgPicture.asset(
-                      'assets/scan.svg',
-                      colorFilter:
-                          const ColorFilter.mode(hintGrey, BlendMode.srcIn),
-                    ),
-                  )
-                ],
+                ),
               ),
             ),
           ),
@@ -131,7 +157,9 @@ class _HomePageState extends State<HomePage> {
             const Text(
               'Tracking',
               style: TextStyle(
-                  fontWeight: FontWeight.w600, fontSize: 16, color: buntingBlue),
+                  fontWeight: FontWeight.w600,
+                  fontSize: 16,
+                  color: buntingBlue),
             ),
             const SizedBox(
               height: 20,
@@ -163,7 +191,10 @@ class _HomePageState extends State<HomePage> {
                           children: [
                             Text(
                               'Shipment Number',
-                              style: TextStyle(color: manateeGrey, fontSize: 12,fontWeight: FontWeight.w500),
+                              style: TextStyle(
+                                  color: manateeGrey,
+                                  fontSize: 12,
+                                  fontWeight: FontWeight.w500),
                             ),
                             Text(
                               'NEJ20089934122231',
@@ -249,10 +280,10 @@ class _HomePageState extends State<HomePage> {
                               Text(
                                 'Status',
                                 style:
-                                TextStyle(color: manateeGrey, fontSize: 12),
+                                    TextStyle(color: manateeGrey, fontSize: 12),
                               ),
                               Row(
-                                mainAxisAlignment:  MainAxisAlignment.end,
+                                mainAxisAlignment: MainAxisAlignment.end,
                                 children: [
                                   Text(
                                     '2 day -3 days',
@@ -327,8 +358,10 @@ class _HomePageState extends State<HomePage> {
                               children: [
                                 Text(
                                   'Status',
-                                  style:
-                                  TextStyle(color: manateeGrey, fontSize: 12,fontWeight: FontWeight.w500),
+                                  style: TextStyle(
+                                      color: manateeGrey,
+                                      fontSize: 12,
+                                      fontWeight: FontWeight.w500),
                                 ),
                                 Text(
                                   'Waiting to collect',
@@ -377,7 +410,9 @@ class _HomePageState extends State<HomePage> {
             const Text(
               'Available Vehicles',
               style: TextStyle(
-                  fontWeight: FontWeight.w600, fontSize: 16, color: buntingBlue),
+                  fontWeight: FontWeight.w600,
+                  fontSize: 16,
+                  color: buntingBlue),
             ),
             const SizedBox(
               height: 20,
