@@ -1,1 +1,11 @@
-<svg enable-background="new 0 0 24 24" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="m0 0h24v24h-24z" fill="none"/><path d="m19 3h-14c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2v-14c0-1.1-.9-2-2-2zm0 16h-14v-14h14z"/><path d="m6.25 7.72h5v1.5h-5z"/><path d="m13 15.75h5v1.5h-5z"/><path d="m13 13.25h5v1.5h-5z"/><path d="m8 18h1.5v-2h2v-1.5h-2v-2h-1.5v2h-2v1.5h2z"/><path d="m14.09 10.95 1.41-1.41 1.41 1.41 1.06-1.06-1.41-1.42 1.41-1.41-1.06-1.06-1.41 1.41-1.41-1.41-1.06 1.06 1.41 1.41-1.41 1.42z"/></svg>
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="150px" height="150px" viewBox="0 0 150 150" version="1.1">
+<g id="surface1">
+<path style=" stroke:none;fill-rule:nonzero;fill:rgb(0%,0%,0%);fill-opacity:1;" d="M 118.75 18.75 L 31.25 18.75 C 24.375 18.75 18.75 24.375 18.75 31.25 L 18.75 118.75 C 18.75 125.625 24.375 131.25 31.25 131.25 L 118.75 131.25 C 125.625 131.25 131.25 125.625 131.25 118.75 L 131.25 31.25 C 131.25 24.375 125.625 18.75 118.75 18.75 Z M 118.75 118.75 L 31.25 118.75 L 31.25 31.25 L 118.75 31.25 Z M 118.75 118.75 "/>
+<path style=" stroke:none;fill-rule:nonzero;fill:rgb(0%,0%,0%);fill-opacity:1;" d="M 39.0625 48.25 L 70.3125 48.25 L 70.3125 57.625 L 39.0625 57.625 Z M 39.0625 48.25 "/>
+<path style=" stroke:none;fill-rule:nonzero;fill:rgb(0%,0%,0%);fill-opacity:1;" d="M 81.25 98.4375 L 112.5 98.4375 L 112.5 107.8125 L 81.25 107.8125 Z M 81.25 98.4375 "/>
+<path style=" stroke:none;fill-rule:nonzero;fill:rgb(0%,0%,0%);fill-opacity:1;" d="M 81.25 82.8125 L 112.5 82.8125 L 112.5 92.1875 L 81.25 92.1875 Z M 81.25 82.8125 "/>
+<path style=" stroke:none;fill-rule:nonzero;fill:rgb(0%,0%,0%);fill-opacity:1;" d="M 50 112.5 L 59.375 112.5 L 59.375 100 L 71.875 100 L 71.875 90.625 L 59.375 90.625 L 59.375 78.125 L 50 78.125 L 50 90.625 L 37.5 90.625 L 37.5 100 L 50 100 Z M 50 112.5 "/>
+<path style=" stroke:none;fill-rule:nonzero;fill:rgb(0%,0%,0%);fill-opacity:1;" d="M 88.0625 68.4375 L 96.875 59.625 L 105.6875 68.4375 L 112.3125 61.8125 L 103.5 52.9375 L 112.3125 44.125 L 105.6875 37.5 L 96.875 46.3125 L 88.0625 37.5 L 81.4375 44.125 L 90.25 52.9375 L 81.4375 61.8125 Z M 88.0625 68.4375 "/>
+</g>
+</svg>

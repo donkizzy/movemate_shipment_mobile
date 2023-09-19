@@ -47,10 +47,6 @@ class LineIndicatorBottomNavbar extends StatelessWidget {
                 child: LineIndicatorBottomNavbarItems(
                   icon: customBottomBarItems[i].icon,
                   label: customBottomBarItems[i].label,
-                  unSelectedFontSize: unselectedFontSize,
-                  selectedFontSize: selectedFontSize,
-                  unselectedIconSize: unselectedIconSize,
-                  selectedIconSize: selectedIconSize,
                   splashColor: splashColor,
                   currentIndex: currentIndex,
                   enableLineIndicator: enableLineIndicator,

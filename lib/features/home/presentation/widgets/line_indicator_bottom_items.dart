@@ -3,13 +3,8 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:movemate_shipment/features/app_colors.dart';
 
 class LineIndicatorBottomNavbarItems extends StatelessWidget {
-  final String icon;
+  final IconData icon;
   final String? label;
-  final double unSelectedFontSize;
-  final double selectedIconSize;
-  final double unselectedIconSize;
-
-  final double selectedFontSize;
   final Color? splashColor;
   final int? currentIndex;
   final int index;
@@ -21,10 +16,6 @@ class LineIndicatorBottomNavbarItems extends StatelessWidget {
     super.key,
     required this.icon,
     this.label,
-    this.unSelectedFontSize = 11,
-    this.selectedFontSize = 12,
-    this.selectedIconSize = 20,
-    this.unselectedIconSize = 15,
     this.splashColor,
     this.currentIndex,
     required this.onTap,
@@ -61,25 +52,13 @@ class LineIndicatorBottomNavbarItems extends StatelessWidget {
               // height: 60,
               child: Column(
                 children: [
-                  SvgPicture.asset(
-                    icon,
-                    height: isSelected ? selectedIconSize : unselectedIconSize,
-                    width: isSelected ? selectedIconSize : unselectedIconSize,
-                    fit: BoxFit.fill,
-                    colorFilter: ColorFilter.mode(
-                      isSelected ? gigasPurple : bombayGrey,
-                      BlendMode.srcIn,
-                    ),
+                   Icon(
+                     icon,
+                    size:28,
+                    color: isSelected
+                        ? gigasPurple
+                        : bombayGrey,
                   ),
-                  // Icon(
-                  //   icon,
-                  //   size: isSelected
-                  //       ? selectedIconSize
-                  //       : unselectedIconSize,
-                  //   color: isSelected
-                  //       ? gigasPurple
-                  //       : bombayGrey,
-                  // ),
                   const SizedBox(
                     height: 5.0,
                   ),
@@ -88,10 +67,8 @@ class LineIndicatorBottomNavbarItems extends StatelessWidget {
                     textAlign: TextAlign.center,
                     overflow: TextOverflow.ellipsis,
                     style: TextStyle(
-                      fontWeight:
-                          isSelected ? FontWeight.w500 : FontWeight.w400,
-                      fontSize:
-                          isSelected ? selectedFontSize : unSelectedFontSize,
+                      fontWeight: FontWeight.w500,
+                      fontSize:14,
                       color: isSelected ? gigasPurple : bombayGrey,
                     ),
                   ),

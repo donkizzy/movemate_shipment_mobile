@@ -33,8 +33,6 @@ class _LandingPageState extends State<LandingPage> {
             bottomNavigationBar: LineIndicatorBottomNavbar(
               currentIndex: value,
               enableLineIndicator: true,
-              selectedIconSize: 25,
-              unselectedIconSize: 25,
               lineIndicatorWidth: 4,
               onTap: (int index) {
                 _selectedIndex.value = index ;
@@ -44,18 +42,18 @@ class _LandingPageState extends State<LandingPage> {
               customBottomBarItems: [
                 LineIndicatorBottomBarItems(
                   label: 'Home',
-                  icon: 'assets/home.svg',
+                  icon: Icons.home_outlined,
                 ),
                 LineIndicatorBottomBarItems(
                   label: 'Calculate',
-                  icon: 'assets/calculate.svg',
+                  icon: Icons.calculate_outlined,
                 ),
                 LineIndicatorBottomBarItems(
                     label: 'Shipment',
-                    icon: 'assets/time-rewind.svg'),
+                    icon: Icons.av_timer_outlined),
                 LineIndicatorBottomBarItems(
                   label: 'Profile',
-                  icon: 'assets/person.svg',
+                  icon: Icons.person_outline,
                 ),
               ],
 
