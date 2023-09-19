@@ -41,7 +41,7 @@ class _HomePageState extends State<HomePage> {
                 children: [
                   SvgPicture.asset(
                     'assets/send.svg',
-                    height: 14,
+                    height: 16,
                     colorFilter:
                         const ColorFilter.mode(Colors.white, BlendMode.srcIn),
                   ),
@@ -50,7 +50,7 @@ class _HomePageState extends State<HomePage> {
                   ),
                   const Text(
                     'Your location',
-                    style: TextStyle(fontSize: 13, color: hintGrey),
+                    style: TextStyle(fontSize: 14, color: hintGrey),
                   )
                 ],
               ),
@@ -60,7 +60,7 @@ class _HomePageState extends State<HomePage> {
                   Text(
                     'Wertheimer, Illinois',
                     style: TextStyle(
-                        fontSize: 14,
+                        fontSize: 16,
                         color: hintGrey,
                         fontWeight: FontWeight.w600),
                   ),
@@ -115,9 +115,10 @@ class _HomePageState extends State<HomePage> {
                             style: const TextStyle(
                                 fontWeight: FontWeight.w500),
                             decoration: const InputDecoration.collapsed(
-                                hintText: '#NEJ200899',
+                                hintText: 'Enter the receipt number...',
                                 hintStyle: TextStyle(
                                     fontWeight: FontWeight.w500,
+                                    fontSize: 14,
                                     color: manateeGrey)),
                           ),
                         ),
@@ -158,13 +159,14 @@ class _HomePageState extends State<HomePage> {
               'Tracking',
               style: TextStyle(
                   fontWeight: FontWeight.w600,
-                  fontSize: 16,
+                  fontSize: 18,
                   color: buntingBlue),
             ),
             const SizedBox(
               height: 20,
             ),
             Container(
+              width: double.infinity,
               decoration: BoxDecoration(
                 color: Colors.white,
                 borderRadius: BorderRadius.circular(15),
@@ -193,8 +195,11 @@ class _HomePageState extends State<HomePage> {
                               'Shipment Number',
                               style: TextStyle(
                                   color: manateeGrey,
-                                  fontSize: 12,
+                                  fontSize: 13,
                                   fontWeight: FontWeight.w500),
+                            ),
+                            const SizedBox(
+                              height: 3,
                             ),
                             Text(
                               'NEJ20089934122231',
@@ -232,13 +237,14 @@ class _HomePageState extends State<HomePage> {
                       children: [
                         Flexible(
                           fit: FlexFit.tight,
+                          flex: 3,
                           child: Row(
                             mainAxisAlignment: MainAxisAlignment.start,
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
                               Container(
-                                height: 33,
-                                width: 30,
+                                height: 35,
+                                width: 35,
                                 decoration: const BoxDecoration(
                                     shape: BoxShape.circle, color: jaffaOrange),
                               ),
@@ -251,17 +257,17 @@ class _HomePageState extends State<HomePage> {
                                   mainAxisAlignment: MainAxisAlignment.start,
                                   children: [
                                     Text(
-                                      'Receiver',
+                                      'Sender',
                                       style: TextStyle(
                                           color: manateeGrey,
-                                          fontSize: 12,
+                                          fontSize: 13,
                                           fontWeight: FontWeight.w500),
                                     ),
                                     Text(
-                                      'Chicago, 6342',
+                                      'Atlanta, 5243',
                                       style: TextStyle(
                                           fontWeight: FontWeight.w500,
-                                          fontSize: 13,
+                                          fontSize: 15,
                                           color: buntingBlue),
                                     ),
                                   ],
@@ -270,31 +276,43 @@ class _HomePageState extends State<HomePage> {
                             ],
                           ),
                         ),
-                        const Flexible(
+                         Flexible(
                           fit: FlexFit.tight,
-                          child: Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            mainAxisAlignment: MainAxisAlignment.start,
-                            mainAxisSize: MainAxisSize.max,
-                            children: [
-                              Text(
-                                'Status',
-                                style:
-                                    TextStyle(color: manateeGrey, fontSize: 12),
-                              ),
-                              Row(
-                                mainAxisAlignment: MainAxisAlignment.end,
-                                children: [
-                                  Text(
-                                    '2 day -3 days',
-                                    style: TextStyle(
-                                        fontWeight: FontWeight.w500,
-                                        fontSize: 13,
-                                        color: buntingBlue),
-                                  ),
-                                ],
-                              ),
-                            ],
+                          flex: 2,
+                          child: Align(
+                            alignment: Alignment.centerRight,
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              mainAxisAlignment: MainAxisAlignment.start,
+                              children: [
+                                const Text(
+                                  'Time',
+                                  style: TextStyle(
+                                      color: manateeGrey,
+                                      fontSize: 13,
+                                      fontWeight: FontWeight.w500),
+                                ),
+                                Row(
+                                  children: [
+                                    Container(
+                                      margin:const EdgeInsets.only(right:5),
+                                      padding: const EdgeInsets.all(4),
+                                      decoration: const BoxDecoration(
+                                        color: appleGreen,
+                                        shape: BoxShape.circle
+                                      ),
+                                    ),
+                                    const Text(
+                                      '2 days - 3days',
+                                      style: TextStyle(
+                                          fontWeight: FontWeight.w500,
+                                          fontSize: 15,
+                                          color: buntingBlue),
+                                    ),
+                                  ],
+                                ),
+                              ],
+                            ),
                           ),
                         ),
                       ],
@@ -310,13 +328,14 @@ class _HomePageState extends State<HomePage> {
                       children: [
                         Flexible(
                           fit: FlexFit.tight,
+                          flex: 3,
                           child: Row(
                             mainAxisAlignment: MainAxisAlignment.start,
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
                               Container(
-                                height: 33,
-                                width: 30,
+                                height: 35,
+                                width: 35,
                                 decoration: const BoxDecoration(
                                     shape: BoxShape.circle, color: jaffaOrange),
                               ),
@@ -332,14 +351,14 @@ class _HomePageState extends State<HomePage> {
                                       'Receiver',
                                       style: TextStyle(
                                           color: manateeGrey,
-                                          fontSize: 12,
+                                          fontSize: 13,
                                           fontWeight: FontWeight.w500),
                                     ),
                                     Text(
                                       'Chicago, 6342',
                                       style: TextStyle(
                                           fontWeight: FontWeight.w500,
-                                          fontSize: 13,
+                                          fontSize: 15,
                                           color: buntingBlue),
                                     ),
                                   ],
@@ -348,30 +367,28 @@ class _HomePageState extends State<HomePage> {
                             ],
                           ),
                         ),
-                        const Flexible(
+                          const Flexible(
                           fit: FlexFit.tight,
-                          child: Align(
-                            alignment: Alignment.centerRight,
-                            child: Column(
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              mainAxisAlignment: MainAxisAlignment.start,
-                              children: [
-                                Text(
-                                  'Status',
-                                  style: TextStyle(
-                                      color: manateeGrey,
-                                      fontSize: 12,
-                                      fontWeight: FontWeight.w500),
-                                ),
-                                Text(
-                                  'Waiting to collect',
-                                  style: TextStyle(
-                                      fontWeight: FontWeight.w500,
-                                      fontSize: 13,
-                                      color: buntingBlue),
-                                ),
-                              ],
-                            ),
+                           flex: 2,
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            mainAxisAlignment: MainAxisAlignment.start,
+                            children: [
+                              Text(
+                                'Status',
+                                style: TextStyle(
+                                    color: manateeGrey,
+                                    fontSize: 13,
+                                    fontWeight: FontWeight.w500),
+                              ),
+                              Text(
+                                'Waiting to collect',
+                                style: TextStyle(
+                                    fontWeight: FontWeight.w500,
+                                    fontSize: 15,
+                                    color: buntingBlue),
+                              ),
+                            ],
                           ),
                         ),
                       ],
@@ -411,7 +428,7 @@ class _HomePageState extends State<HomePage> {
               'Available Vehicles',
               style: TextStyle(
                   fontWeight: FontWeight.w600,
-                  fontSize: 16,
+                  fontSize: 18,
                   color: buntingBlue),
             ),
             const SizedBox(

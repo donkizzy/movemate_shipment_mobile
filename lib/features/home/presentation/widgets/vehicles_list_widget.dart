@@ -54,13 +54,13 @@ class VehicleItem extends StatelessWidget {
             Text(
               title,
               style: const TextStyle(
-                  fontWeight: FontWeight.w400, fontSize: 16, color: buntingBlue),
+                  fontWeight: FontWeight.w500, fontSize: 16, color: buntingBlue),
             ),
 
             Text(
               subTitle,
               style: const TextStyle(
-                  fontWeight: FontWeight.w400, fontSize: 13, color: manateeGrey),
+                  fontWeight: FontWeight.w500, fontSize: 13, color: manateeGrey),
             ),
           ],
         ),

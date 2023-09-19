@@ -31,20 +31,23 @@ class _CalculatePageState extends State<CalculatePage> {
       bottomNavigationBar: SizedBox(
         width: double.infinity,
         child: Padding(
-          padding: const EdgeInsets.all(16.0),
-          child: MaterialButton(
-            onPressed: (){
-              Navigator.push(context, MaterialPageRoute(builder: (context) => const CalculateSuccessfulPage()));
-            },
-            elevation: 0,
-            padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 15),
-            shape: RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(50),
-            ),
-            color: jaffaOrange,
-            child:const Text(
-              'Calculate',
-              style: TextStyle(color: Colors.white, fontSize: 16,fontWeight: FontWeight.w600),
+          padding: const EdgeInsets.only(left: 16.0,right: 16,bottom: 20,top: 16),
+          child: Hero(
+            tag: 'calculate',
+            child: MaterialButton(
+              onPressed: (){
+                Navigator.push(context, MaterialPageRoute(builder: (context) => const CalculateSuccessfulPage()));
+              },
+              elevation: 0,
+              padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 15),
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(50),
+              ),
+              color: jaffaOrange,
+              child:const Text(
+                'Calculate',
+                style: TextStyle(color: Colors.white, fontSize: 16,fontWeight: FontWeight.w600),
+              ),
             ),
           ),
         ),
@@ -55,7 +58,7 @@ class _CalculatePageState extends State<CalculatePage> {
         title: const Text(
           'Calculate',
           style: TextStyle(
-              fontSize: 15, color: hintGrey, fontWeight: FontWeight.w600),
+              fontSize: 18, color: hintGrey, fontWeight: FontWeight.bold),
         ),
         leading: const BackButton(
           color: hintGrey,
@@ -67,7 +70,7 @@ class _CalculatePageState extends State<CalculatePage> {
           const Text(
             'Destination',
             style: TextStyle(
-                fontWeight: FontWeight.w600, fontSize: 16, color: buntingBlue),
+                fontWeight: FontWeight.w600, fontSize: 18, color: buntingBlue),
           ),
           const SizedBox(
             height: 20,
@@ -85,8 +88,7 @@ class _CalculatePageState extends State<CalculatePage> {
                 ),
               ],
             ),
-            padding:
-                const EdgeInsets.only(top: 15, bottom: 10, left: 15, right: 15),
+            padding: const EdgeInsets.only(top: 15, bottom: 10, left: 15, right: 15),
             child: Column(
               mainAxisSize: MainAxisSize.min,
               crossAxisAlignment: CrossAxisAlignment.start,
@@ -235,7 +237,7 @@ class _CalculatePageState extends State<CalculatePage> {
           const Text(
             'Packaging',
             style: TextStyle(
-                fontWeight: FontWeight.w600, fontSize: 16, color: buntingBlue),
+                fontWeight: FontWeight.w600, fontSize: 18, color: buntingBlue),
           ),
           const Text(
             'What are you sending?',
@@ -295,7 +297,7 @@ class _CalculatePageState extends State<CalculatePage> {
           const Text(
             'Categories',
             style: TextStyle(
-                fontWeight: FontWeight.w600, fontSize: 16, color: buntingBlue),
+                fontWeight: FontWeight.w600, fontSize: 18, color: buntingBlue),
           ),
           const Text(
             'What are you sending?',
