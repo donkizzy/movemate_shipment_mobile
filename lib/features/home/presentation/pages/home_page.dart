@@ -305,12 +305,14 @@ class _HomePageState extends State<HomePage> {
                                         shape: BoxShape.circle
                                       ),
                                     ),
-                                    const Text(
-                                      '2 days - 3days',
-                                      style: TextStyle(
-                                          fontWeight: FontWeight.w500,
-                                          fontSize: 15,
-                                          color: buntingBlue),
+                                    Expanded(
+                                      child: const Text(
+                                        '2 days - 3days',
+                                        style: TextStyle(
+                                            fontWeight: FontWeight.w500,
+                                            fontSize: 15,
+                                            color: buntingBlue),
+                                      ),
                                     ),
                                   ],
                                 ),

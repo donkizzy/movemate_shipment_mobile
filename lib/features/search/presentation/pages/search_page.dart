@@ -93,62 +93,65 @@ class _SearchPageState extends State<SearchPage> {
         ], color: Colors.white, borderRadius: BorderRadius.circular(15.0)),
         padding: const EdgeInsets.only(left: 10, right: 10, top: 10),
         child: AnimationLimiter(
-            child: Column(
-                mainAxisSize: MainAxisSize.min,
-                children: AnimationConfiguration.toStaggeredList(
-                  duration: const Duration(milliseconds: 375),
-                  childAnimationBuilder: (widget) => SlideAnimation(
-                    horizontalOffset: 50.0,
-                    child: FadeInAnimation(
-                      child: widget,
+            child: SingleChildScrollView(
+              child: Column(
+                  mainAxisSize: MainAxisSize.min,
+                  children: AnimationConfiguration.toStaggeredList(
+                    duration: const Duration(milliseconds: 375),
+                    childAnimationBuilder: (widget) => SlideAnimation(
+                      horizontalOffset: 50.0,
+                      child: FadeInAnimation(
+                        child: widget,
+                      ),
                     ),
-                  ),
-                  children: [
-                    ListView.separated(
-                      shrinkWrap: true,
-                      itemCount: 6,
-                      padding: const EdgeInsets.only(bottom: 10),
-                      itemBuilder: (BuildContext context, int index) {
-                        return ListTile(
-                          visualDensity:
-                              const VisualDensity(horizontal: -4, vertical: -4),
-                          leading: Container(
-                            width: 33,
-                            decoration: const BoxDecoration(
-                              color: delugePurple,
-                              shape: BoxShape.circle,
+                    children: [
+                      ListView.separated(
+                        shrinkWrap: true,
+                        itemCount: 6,
+                        physics: const NeverScrollableScrollPhysics(),
+                        padding: const EdgeInsets.only(bottom: 10),
+                        itemBuilder: (BuildContext context, int index) {
+                          return ListTile(
+                            visualDensity:
+                                const VisualDensity(horizontal: -4, vertical: -4),
+                            leading: Container(
+                              width: 33,
+                              decoration: const BoxDecoration(
+                                color: delugePurple,
+                                shape: BoxShape.circle,
+                              ),
+                              child: Center(
+                                  child: SvgPicture.asset(
+                                'assets/carton_white.svg',
+                                height: 18,
+                              )),
                             ),
-                            child: Center(
-                                child: SvgPicture.asset(
-                              'assets/carton_white.svg',
-                              height: 18,
-                            )),
-                          ),
-                          title: const Text(
-                            'Macbook Pro M2',
-                            style: TextStyle(
-                              fontWeight: FontWeight.w500,
-                            ),
-                          ),
-                          subtitle: const Text(
-                            '#NE43857340857904 • Paris -> Morocco',
-                            style: TextStyle(
+                            title: const Text(
+                              'Macbook Pro M2',
+                              style: TextStyle(
                                 fontWeight: FontWeight.w500,
-                                color: manateeGrey),
-                          ),
-                        );
-                      },
-                      separatorBuilder: (BuildContext context, int index) {
-                        return Padding(
-                          padding: const EdgeInsets.symmetric(horizontal: 16.0),
-                          child: Divider(
-                            color: bombayGrey.withOpacity(0.3),
-                          ),
-                        );
-                      },
-                    )
-                  ],
-                ))),
+                              ),
+                            ),
+                            subtitle: const Text(
+                              '#NE43857340857904 • Paris -> Morocco',
+                              style: TextStyle(
+                                  fontWeight: FontWeight.w500,
+                                  color: manateeGrey),
+                            ),
+                          );
+                        },
+                        separatorBuilder: (BuildContext context, int index) {
+                          return Padding(
+                            padding: const EdgeInsets.symmetric(horizontal: 16.0),
+                            child: Divider(
+                              color: bombayGrey.withOpacity(0.3),
+                            ),
+                          );
+                        },
+                      )
+                    ],
+                  )),
+            )),
       ),
     );
   }

@@ -50,25 +50,29 @@ class VehicleItem extends StatelessWidget {
         color: Colors.white,
         borderRadius: BorderRadius.circular(10),
       ),
-      child:  Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 8.0,vertical: 10),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Text(
+      child:  Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          SizedBox(height: 10,),
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal:8.0),
+            child: Text(
               title,
               style: const TextStyle(
                   fontWeight: FontWeight.w500, fontSize: 16, color: buntingBlue),
             ),
+          ),
 
-            Text(
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal:8.0),
+            child: Text(
               subTitle,
               style: const TextStyle(
                   fontWeight: FontWeight.w500, fontSize: 13, color: manateeGrey),
             ),
-            Image.asset(image)
-          ],
-        ),
+          ),
+          Image.asset(image)
+        ],
       ) ,
     );
   }
