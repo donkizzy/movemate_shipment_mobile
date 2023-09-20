@@ -15,14 +15,17 @@ class VehicleListWidget extends StatelessWidget {
            VehicleItem(
              title: 'Ocean Freight',
              subTitle: 'International',
+             image: 'assets/cargo-ship.png',
            ),
            VehicleItem(
              title: 'Cargo Freight',
              subTitle: 'Relaible',
+             image: 'assets/cargo-truck.png',
            ),
            VehicleItem(
              title: 'Air Freight',
              subTitle: 'International',
+             image: 'assets/cargo-ship.png',
            ),
         ],
       ),
@@ -33,8 +36,9 @@ class VehicleListWidget extends StatelessWidget {
 class VehicleItem extends StatelessWidget {
   final String title ;
   final String subTitle ;
+  final String image ;
   const VehicleItem({
-    super.key, required this.title, required this.subTitle,
+    super.key, required this.title, required this.subTitle, required this.image,
   });
 
   @override
@@ -62,6 +66,7 @@ class VehicleItem extends StatelessWidget {
               style: const TextStyle(
                   fontWeight: FontWeight.w500, fontSize: 13, color: manateeGrey),
             ),
+            Image.asset(image)
           ],
         ),
       ) ,
