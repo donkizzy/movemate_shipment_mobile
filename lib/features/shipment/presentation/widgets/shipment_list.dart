@@ -2,6 +2,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_staggered_animations/flutter_staggered_animations.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:movemate_shipment/features/app_colors.dart';
 
 class ShipmentList extends StatefulWidget {
@@ -17,14 +18,15 @@ class _ShipmentListState extends State<ShipmentList> {
     return AnimationLimiter(
       child: ListView(
         padding: const EdgeInsets.only(top: 20, left: 15, right: 15),
+        physics: const BouncingScrollPhysics(),
         children:  AnimationConfiguration.toStaggeredList(
           duration: const Duration(milliseconds: 300),
           childAnimationBuilder: (widget) => SlideAnimation(
            // curve: Curves.easeIn,
             curve: Curves.ease,
 
-            horizontalOffset:  0.0,
-            verticalOffset:  50,
+              horizontalOffset:  0.0,
+              verticalOffset:  50,
 
             //duration: ,
             child: FadeInAnimation(
@@ -195,29 +197,29 @@ class _ShipmentListState extends State<ShipmentList> {
                           flex: 1,
                           child: SvgPicture.asset('assets/carton.svg',height: 65,width: 65,))
 
-                    ],
-                  ),
-                  const SizedBox(height: 15,),
-                  Row(
-                    children: [
-                      const Text(
-                        '\$650 USD',
-                        style: TextStyle(
-                            fontWeight: FontWeight.w600, fontSize: 13, color: gigasPurple),
-                      ),
-                      Container(
-                        margin:const EdgeInsets.symmetric(horizontal:5),
-                        padding: const EdgeInsets.all(2),
-                        decoration:  BoxDecoration(
-                            color: manateeGrey.withOpacity(0.5),
-                            shape: BoxShape.circle
+                      ],
+                    ),
+                    const SizedBox(height: 15,),
+                    Row(
+                      children: [
+                        const Text(
+                          '\$650 USD',
+                          style: TextStyle(
+                              fontWeight: FontWeight.w600, fontSize: 13, color: gigasPurple),
                         ),
-                      ),
-                      const Text(
-                        'Sep 20,2023',
-                        style: TextStyle(
-                            fontWeight: FontWeight.w500, fontSize: 12, color: buntingBlue),
-                      ),
+                        Container(
+                          margin:const EdgeInsets.symmetric(horizontal:5),
+                          padding: const EdgeInsets.all(2),
+                          decoration:  BoxDecoration(
+                              color: manateeGrey.withOpacity(0.5),
+                              shape: BoxShape.circle
+                          ),
+                        ),
+                        const Text(
+                          'Sep 20,2023',
+                          style: TextStyle(
+                              fontWeight: FontWeight.w500, fontSize: 12, color: buntingBlue),
+                        ),
 
                     ],
                   )
@@ -288,29 +290,29 @@ class _ShipmentListState extends State<ShipmentList> {
                           flex: 1,
                           child: SvgPicture.asset('assets/carton.svg',height: 65,width: 65,))
 
-                    ],
-                  ),
-                  const SizedBox(height: 15,),
-                  Row(
-                    children: [
-                      const Text(
-                        '\$650 USD',
-                        style: TextStyle(
-                            fontWeight: FontWeight.w600, fontSize: 13, color: gigasPurple),
-                      ),
-                      Container(
-                        margin:const EdgeInsets.symmetric(horizontal:5),
-                        padding: const EdgeInsets.all(2),
-                        decoration:  BoxDecoration(
-                            color: manateeGrey.withOpacity(0.5),
-                            shape: BoxShape.circle
+                      ],
+                    ),
+                    const SizedBox(height: 15,),
+                    Row(
+                      children: [
+                        const Text(
+                          '\$650 USD',
+                          style: TextStyle(
+                              fontWeight: FontWeight.w600, fontSize: 13, color: gigasPurple),
                         ),
-                      ),
-                      const Text(
-                        'Sep 20,2023',
-                        style: TextStyle(
-                            fontWeight: FontWeight.w500, fontSize: 12, color: buntingBlue),
-                      ),
+                        Container(
+                          margin:const EdgeInsets.symmetric(horizontal:5),
+                          padding: const EdgeInsets.all(2),
+                          decoration:  BoxDecoration(
+                              color: manateeGrey.withOpacity(0.5),
+                              shape: BoxShape.circle
+                          ),
+                        ),
+                        const Text(
+                          'Sep 20,2023',
+                          style: TextStyle(
+                              fontWeight: FontWeight.w500, fontSize: 12, color: buntingBlue),
+                        ),
 
                     ],
                   )
@@ -344,10 +346,10 @@ class _ShipmentListState extends State<ShipmentList> {
                       ),
                       child: Row(
                         children: [
-                          SvgPicture.asset('assets/sync.svg',height: 10,colorFilter: const ColorFilter.mode(
+                          SvgPicture.asset('assets/time-stop-watch.svg',height: 10,colorFilter: const ColorFilter.mode(
                               wedgeWoodBlue, BlendMode.srcIn)),
                           const SizedBox(width: 10,),
-                          const Text('in-progress',style: TextStyle(color: wedgeWoodBlue,fontWeight: FontWeight.w600),)
+                          const Text('loading',style: TextStyle(color: wedgeWoodBlue,fontWeight: FontWeight.w600),)
                         ],
                       ),
                     ),
@@ -437,10 +439,10 @@ class _ShipmentListState extends State<ShipmentList> {
                       ),
                       child: Row(
                         children: [
-                          SvgPicture.asset('assets/sync.svg',height: 10,colorFilter: const ColorFilter.mode(
+                          SvgPicture.asset('assets/time-stop-watch.svg',height: 10,colorFilter: const ColorFilter.mode(
                               wedgeWoodBlue, BlendMode.srcIn)),
                           const SizedBox(width: 10,),
-                          const Text('in-progress',style: TextStyle(color: wedgeWoodBlue,fontWeight: FontWeight.w600),)
+                          const Text('loading',style: TextStyle(color: wedgeWoodBlue,fontWeight: FontWeight.w600),)
                         ],
                       ),
                     ),
@@ -660,29 +662,29 @@ class _ShipmentListState extends State<ShipmentList> {
                           flex: 1,
                           child: SvgPicture.asset('assets/carton.svg',height: 65,width: 65,))
 
-                    ],
-                  ),
-                  const SizedBox(height: 15,),
-                  Row(
-                    children: [
-                      const Text(
-                        '\$1400 USD',
-                        style: TextStyle(
-                            fontWeight: FontWeight.w600, fontSize: 13, color: gigasPurple),
-                      ),
-                      Container(
-                        margin:const EdgeInsets.symmetric(horizontal:5),
-                        padding: const EdgeInsets.all(2),
-                        decoration:  BoxDecoration(
-                            color: manateeGrey.withOpacity(0.5),
-                            shape: BoxShape.circle
+                      ],
+                    ),
+                    const SizedBox(height: 15,),
+                    Row(
+                      children: [
+                        const Text(
+                          '\$1400 USD',
+                          style: TextStyle(
+                              fontWeight: FontWeight.w600, fontSize: 13, color: gigasPurple),
                         ),
-                      ),
-                      const Text(
-                        'Sep 20,2023',
-                        style: TextStyle(
-                            fontWeight: FontWeight.w500, fontSize: 12, color: buntingBlue),
-                      ),
+                        Container(
+                          margin:const EdgeInsets.symmetric(horizontal:5),
+                          padding: const EdgeInsets.all(2),
+                          decoration:  BoxDecoration(
+                              color: manateeGrey.withOpacity(0.5),
+                              shape: BoxShape.circle
+                          ),
+                        ),
+                        const Text(
+                          'Sep 20,2023',
+                          style: TextStyle(
+                              fontWeight: FontWeight.w500, fontSize: 12, color: buntingBlue),
+                        ),
 
                     ],
                   )
@@ -1246,4 +1248,5 @@ class _ShipmentListState extends State<ShipmentList> {
       ),
     );
   }
+
 }

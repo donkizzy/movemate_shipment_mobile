@@ -18,10 +18,6 @@ class _LandingPageState extends State<LandingPage> {
 
   final List<Widget> _children = [
     const HomePage(),
-    const Text('Account'),
-    const Text('Leaves'),
-    const Text('Loyalty'),
-    const Text('Requests'),
   ];
   @override
   Widget build(BuildContext context) {

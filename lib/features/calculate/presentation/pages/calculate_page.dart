@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_staggered_animations/flutter_staggered_animations.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:movemate_shipment/features/app_colors.dart';
 import 'package:movemate_shipment/features/home/presentation/pages/calculate_success.dart';
 
@@ -55,10 +56,13 @@ class _CalculatePageState extends State<CalculatePage> {
       appBar: AppBar(
         backgroundColor: gigasPurple,
         centerTitle: true,
-        title: const Text(
+        title:  Text(
           'Calculate',
-          style: TextStyle(
-              fontSize: 18, color: hintGrey, fontWeight: FontWeight.bold),
+          style: GoogleFonts.openSans(
+              fontWeight: FontWeight.w600,
+              fontSize: 18,
+              color: hintGrey
+          ),
         ),
         leading: const BackButton(
           color: hintGrey,
@@ -67,10 +71,13 @@ class _CalculatePageState extends State<CalculatePage> {
       body: ListView(
         padding: const EdgeInsets.only(top: 20, left: 15, right: 15),
         children: [
-          const Text(
+           Text(
             'Destination',
-            style: TextStyle(
-                fontWeight: FontWeight.w600, fontSize: 18, color: buntingBlue),
+            style: GoogleFonts.openSans(
+                fontWeight: FontWeight.w600,
+                fontSize: 18,
+                color: buntingBlue
+            ),
           ),
           const SizedBox(
             height: 20,
@@ -114,6 +121,7 @@ class _CalculatePageState extends State<CalculatePage> {
                               padding: const EdgeInsets.only(right: 8.0),
                               child: SvgPicture.asset(
                                 'assets/unarchive.svg',
+                                height: 20,
                                 colorFilter: const ColorFilter.mode(
                                     jumboGrey, BlendMode.srcIn),
                               ),
@@ -156,6 +164,7 @@ class _CalculatePageState extends State<CalculatePage> {
                               padding: const EdgeInsets.only(right: 8.0),
                               child: SvgPicture.asset(
                                 'assets/archive.svg',
+                                height: 20,
                                 colorFilter: const ColorFilter.mode(
                                     jumboGrey, BlendMode.srcIn),
                               ),
@@ -197,7 +206,8 @@ class _CalculatePageState extends State<CalculatePage> {
                             Padding(
                               padding: const EdgeInsets.only(right: 8.0),
                               child: SvgPicture.asset(
-                                'assets/unarchive.svg',
+                                'assets/hourglass-end.svg',
+                                height: 20,
                                 colorFilter: const ColorFilter.mode(
                                     jumboGrey, BlendMode.srcIn),
                               ),
@@ -234,10 +244,13 @@ class _CalculatePageState extends State<CalculatePage> {
           const SizedBox(
             height: 30,
           ),
-          const Text(
+           Text(
             'Packaging',
-            style: TextStyle(
-                fontWeight: FontWeight.w600, fontSize: 18, color: buntingBlue),
+            style: GoogleFonts.openSans(
+                fontWeight: FontWeight.w600,
+                fontSize: 18,
+                color: buntingBlue
+            ),
           ),
           const Text(
             'What are you sending?',
@@ -294,10 +307,13 @@ class _CalculatePageState extends State<CalculatePage> {
           const SizedBox(
             height: 20,
           ),
-          const Text(
+           Text(
             'Categories',
-            style: TextStyle(
-                fontWeight: FontWeight.w600, fontSize: 18, color: buntingBlue),
+            style: GoogleFonts.openSans(
+                fontWeight: FontWeight.w600,
+                fontSize: 18,
+                color: buntingBlue
+            ),
           ),
           const Text(
             'What are you sending?',

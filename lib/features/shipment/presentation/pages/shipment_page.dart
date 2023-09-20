@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:movemate_shipment/features/app_colors.dart';
 import 'package:movemate_shipment/features/shipment/presentation/widgets/custom_indicator.dart';
 import 'package:movemate_shipment/features/shipment/presentation/widgets/shipment_list.dart';
@@ -22,10 +23,13 @@ class _ShipmentPageState extends State<ShipmentPage> {
         appBar: AppBar(
           backgroundColor: gigasPurple,
           centerTitle: true,
-          title: const Text(
+          title:  Text(
             'Shipment history',
-            style: TextStyle(
-                fontSize: 18, color: hintGrey, fontWeight: FontWeight.bold),
+            style: GoogleFonts.openSans(
+                fontWeight: FontWeight.w600,
+                fontSize: 18,
+                color: hintGrey
+            ),
           ),
           bottom: PreferredSize(
             preferredSize: const Size(double.infinity, 40),
@@ -79,7 +83,7 @@ class _ShipmentPageState extends State<ShipmentPage> {
                                       ? jaffaOrange
                                       : alabasterGrey.withOpacity(0.2),
                                   borderRadius: BorderRadius.circular(10)),
-                              child: Text(
+                              child: const Text(
                                 '12',
                                 style: TextStyle(
                                     fontSize: 12,

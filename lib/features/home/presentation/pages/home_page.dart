@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_staggered_animations/flutter_staggered_animations.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:movemate_shipment/features/app_colors.dart';
 import 'package:movemate_shipment/features/home/presentation/widgets/vehicles_list_widget.dart';
 import 'package:movemate_shipment/features/search/presentation/pages/search_page.dart';
@@ -54,17 +55,18 @@ class _HomePageState extends State<HomePage> {
                   )
                 ],
               ),
-              const Row(
+               Row(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
                     'Wertheimer, Illinois',
-                    style: TextStyle(
-                        fontSize: 16,
-                        color: hintGrey,
-                        fontWeight: FontWeight.w600),
+                      style: GoogleFonts.openSans(
+                          fontWeight: FontWeight.w600,
+                          fontSize: 16,
+                          color: hintGrey
+                      )
                   ),
-                  SizedBox(
+                  const SizedBox(
                     width: 3.0,
                   ),
                   Icon(Icons.keyboard_arrow_down_outlined,
@@ -155,12 +157,13 @@ class _HomePageState extends State<HomePage> {
             ),
           ),
           children: [
-            const Text(
+             Text(
               'Tracking',
-              style: TextStyle(
-                  fontWeight: FontWeight.w600,
-                  fontSize: 18,
-                  color: buntingBlue),
+                style: GoogleFonts.openSans(
+                    fontWeight: FontWeight.w600,
+                    fontSize: 18,
+                    color: buntingBlue
+                )
             ),
             const SizedBox(
               height: 20,
@@ -212,7 +215,7 @@ class _HomePageState extends State<HomePage> {
                         ),
                         Image.asset(
                           'assets/forklift.png',
-                          height: 40,
+                          height: 45,
                         )
                       ],
                     ),
@@ -424,12 +427,13 @@ class _HomePageState extends State<HomePage> {
             const SizedBox(
               height: 40,
             ),
-            const Text(
+             Text(
               'Available Vehicles',
-              style: TextStyle(
-                  fontWeight: FontWeight.w600,
-                  fontSize: 18,
-                  color: buntingBlue),
+              style: GoogleFonts.openSans(
+                    fontWeight: FontWeight.w600,
+                    fontSize: 18,
+                    color: buntingBlue
+              )
             ),
             const SizedBox(
               height: 20,
